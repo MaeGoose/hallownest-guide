@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'Trajan Pro-Regular';
+    src: url(font/Trajan\ Pro\ Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Perpetua-Regular';
+    src: url(font/perpetua.ttf) format('truetype');
+}
+
+/* Container */
+.HOME {
+    background-color: #1f2937;
+    width: 100%;
+    min-height: 1381px;
+    position: absolute;
+}
+
+.HOME::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://c.animaapp.com/mfuzlnqa7TqH7Z/img/controller_prompt_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Header */
+.HOME .HEADER {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    height: 295px;
+}
+
+.HOME .element-hollow-knight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 264px;
+    object-fit: cover;
+}
+
+.HOME .the-definitive-guide {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(597px, 80vw);
+    height: 244px;
+    object-fit: contain;
+}
+
+.HOME .prompt-divider {
+    position: absolute;
+    top: 233px;
+    left: 0;
+    width: 100%;
+    height: 62px;
+    background: url('.../prompt-divider-1.png') repeat-x center;
+    background-size: auto 62px;
+}
+
+/* Navigation */
+.HOME .NAV-BAR {
+    position: absolute;
+    top: 336px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1024px, 90vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.HOME .NAV-BAR ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    padding: 0;
+    margin: 0;
+}
+
+.HOME .NAV-BAR ul li a {
+    font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.HOME .NAV-BAR ul li a:hover {
+    color: #9ca3af;
+}
+
+.HOME .NAV-BAR ul li a.active {
+    text-decoration: underline;
+}
+
+.HOME .line {
+    width: 100%;
+    height: 4px;
+}
+
+/* Quote */
+.HOME .quote {
+    position: absolute;
+    top: 414px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(831px, 90vw);
+    text-align: center;
+    color: #fff;
+}
+
+.HOME .in-wilds-beyond-they {
+    font-family: "Perpetua-Regular", Helvetica;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+.HOME .text-wrapper-6 {
+    margin-top: 20px;
+    font-family: "Trajan Pro-Regular", Helvetica;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+/* Body */
+.HOME .BODY {
+    position: relative;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1115px, 90vw);
+    font-family: "Perpetua-Regular", Helvetica;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 32px;
+    padding: 0 20px;
+}
+
+
+/* Quote Divider */
+.HOME .CHARMS {
+    position: absolute;
+    margin-top: 900px;
+    /* separates it visually from BODY */
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1115px, 90vw);
+    font-family: "Perpetua-Regular", Helvetica;
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    line-height: 30px;
+    padding: 0 20px;
+}
+
+/* Charms Section Heading */
+.HOME .CHARMS h2 {
+    font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Charm List */
+.HOME .CHARMS ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    text-align: left;
+    max-width: 600px;
+}
+
+.HOME .CHARMS ul li {
+    font-family: "Perpetua-Regular", Helvetica;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+    color: #e5e7eb;
+}
+
+.HOME .CHARMS ul li::before {
+    content: "◆";
+    /* decorative bullet */
+    position: absolute;
+    left: 0;
+    color: #9ca3af;
+    font-size: 14px;
+    top: 6px;
+}
+
+/* Feedback */
+.HOME .feedback {
+    position: absolute;
+    top: 972px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(701px, 90vw);
+    text-align: center;
+    color: #fff;
+}
+
+.feedback .rating {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.feedback .rating img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.4;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.feedback .rating img:hover,
+.feedback .rating img.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.HOME .feedback h2 {
+    font-family: "Trajan Pro-Regular", Helvetica;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.HOME .feedback p {
+    font-family: "Trajan Pro-Regular", Helvetica;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.HOME .feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.HOME .feedback-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.HOME .feedback-form button {
+    padding: 10px 20px;
+    background: #1d2e65;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Corners */
+.HOME .background {
+    position: absolute;
+    top: 299px;
+    left: 0;
+    width: 100%;
+    height: 1083px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 15px;
+    pointer-events: none;
+}
+
+
+
+.HOME .quote-divider {
+    margin-top: 25px;
+    width: 250px;
+    /* adjust size */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+    /* optional subtle look */
+}
+
+.HOME .overscan-corner,
+.HOME .img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.HOME .overscan-corner {
+    margin-top: 859px;
+}
+
+.HOME .img {
+    transform: rotate(-270deg);
+    margin-top: 37px;
+}
