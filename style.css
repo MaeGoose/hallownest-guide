@@ -8,313 +8,439 @@
     src: url(font/perpetua.ttf) format('truetype');
 }
 
-/* Container */
-.HOME {
-    background-color: #1f2937;
-    width: 100%;
-    min-height: 1381px;
-    position: absolute;
+body,
+header,
+nav,
+main,
+footer,
+h1,
+div,
+img,
+ul,
+figure,
+figcaption,
+section,
+article,
+aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.HOME::before {
-    content: '';
-    position: absolute;
+img {
+    max-width: 100%;
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://c.animaapp.com/mfuzlnqa7TqH7Z/img/controller_prompt_bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    z-index: -1;
+    height: 190px;
+
 }
 
-/* Header */
-.HOME .HEADER {
-    position: absolute;
-    top: 4px;
-    left: 0;
-    width: 100%;
-    height: 295px;
-}
 
-.HOME .element-hollow-knight {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 264px;
-    object-fit: cover;
-}
+
 
 .HOME .the-definitive-guide {
     position: absolute;
-    top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     width: min(597px, 80vw);
-    height: 244px;
-    object-fit: contain;
-}
-
-.HOME .prompt-divider {
-    position: absolute;
-    top: 233px;
-    left: 0;
-    width: 100%;
-    height: 62px;
-    background: url('.../prompt-divider-1.png') repeat-x center;
-    background-size: auto 62px;
-}
-
-/* Navigation */
-.HOME .NAV-BAR {
-    position: absolute;
-    top: 336px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1024px, 90vw);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.HOME .NAV-BAR ul {
-    list-style: none;
-    display: flex;
-    gap: 80px;
-    padding: 0;
-    margin: 0;
-}
-
-.HOME .NAV-BAR ul li a {
-    font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
-    font-size: 20px;
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.HOME .NAV-BAR ul li a:hover {
-    color: #9ca3af;
-}
-
-.HOME .NAV-BAR ul li a.active {
-    text-decoration: underline;
-}
-
-.HOME .line {
-    width: 100%;
-    height: 4px;
-}
-
-/* Quote */
-.HOME .quote {
-    position: absolute;
-    top: 414px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(831px, 90vw);
-    text-align: center;
-    color: #fff;
-}
-
-.HOME .in-wilds-beyond-they {
-    font-family: "Perpetua-Regular", Helvetica;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 32px;
-}
-
-.HOME .text-wrapper-6 {
-    margin-top: 20px;
-    font-family: "Trajan Pro-Regular", Helvetica;
-    font-size: 22px;
-    text-decoration: underline;
-}
-
-/* Body */
-.HOME .BODY {
-    position: relative;
-    top: 700px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1115px, 90vw);
-    font-family: "Perpetua-Regular", Helvetica;
-    color: #ffffff;
-    font-size: 24px;
-    text-align: center;
-    line-height: 32px;
-    padding: 0 20px;
-}
-
-
-/* Quote Divider */
-.HOME .CHARMS {
-    position: absolute;
-    margin-top: 900px;
-    /* separates it visually from BODY */
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1115px, 90vw);
-    font-family: "Perpetua-Regular", Helvetica;
-    color: #ffffff;
-    font-size: 22px;
-    text-align: center;
-    line-height: 30px;
-    padding: 0 20px;
-}
-
-/* Charms Section Heading */
-.HOME .CHARMS h2 {
-    font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
-    font-size: 26px;
-    margin-bottom: 20px;
-    text-decoration: underline;
-    color: #fff;
-}
-
-/* Charm List */
-.HOME .CHARMS ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px auto;
-    text-align: left;
-    max-width: 600px;
-}
-
-.HOME .CHARMS ul li {
-    font-family: "Perpetua-Regular", Helvetica;
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 25px;
-    color: #e5e7eb;
-}
-
-.HOME .CHARMS ul li::before {
-    content: "◆";
-    /* decorative bullet */
-    position: absolute;
-    left: 0;
-    color: #9ca3af;
-    font-size: 14px;
-    top: 6px;
-}
-
-/* Feedback */
-.HOME .feedback {
-    position: absolute;
-    top: 972px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(701px, 90vw);
-    text-align: center;
-    color: #fff;
-}
-
-.feedback .rating {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 15px 0;
-    cursor: pointer;
-}
-
-.feedback .rating img {
-    width: 40px;
-    height: 40px;
-    opacity: 0.4;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.feedback .rating img:hover,
-.feedback .rating img.active {
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.HOME .feedback h2 {
-    font-family: "Trajan Pro-Regular", Helvetica;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.HOME .feedback p {
-    font-family: "Trajan Pro-Regular", Helvetica;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.HOME .feedback-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.HOME .feedback-form input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-}
-
-.HOME .feedback-form button {
-    padding: 10px 20px;
-    background: #1d2e65;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Corners */
-.HOME .background {
-    position: absolute;
-    top: 299px;
-    left: 0;
-    width: 100%;
-    height: 1083px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 15px;
-    pointer-events: none;
-}
-
-
-
-.HOME .quote-divider {
-    margin-top: 25px;
-    width: 250px;
-    /* adjust size */
     height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.8;
-    /* optional subtle look */
-}
-
-.HOME .overscan-corner,
-.HOME .img {
-    width: 200px;
-    height: 200px;
     object-fit: contain;
 }
 
-.HOME .overscan-corner {
-    margin-top: 859px;
+header img {
+    margin: 0 auto;
 }
 
-.HOME .img {
-    transform: rotate(-270deg);
-    margin-top: 37px;
+nav {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    font-size: 1.5em;
+    font-family: "Francois One", sans-serif;
+}
+
+nav li:first-child {
+    border-top: none;
+}
+
+nav li a {
+    display: block;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+.HOME .BODY {
+    text-align: center;
+    color: #ffffff;
+    font-family: "Perpetua-Regular", Helvetica;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 60px auto;
+    width: min(1115px, 90vw);
+    padding: 0 20px;
+}
+
+
+.mobile {
+    display: block;
+}
+
+.tablet-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 630px),
+print {
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .HOME {
+        background-color: #1f2937;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .HOME .HEADER {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .HOME .element-hollow-knight {
+        width: 100%;
+        height: 295px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .HOME .the-definitive-guide {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(597px, 80vw);
+        height: auto;
+        object-fit: contain;
+    }
+
+    .HOME .prompt-divider {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: -81px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .HOME .HEADER::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(to bottom, rgba(31, 41, 55, 0) 0%, #1f2937 100%);
+        z-index: 1;
+    }
+
+    .HOME .NAV-BAR {
+        margin: 40px auto;
+        width: min(1024px, 90vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .HOME .NAV-BAR ul {
+        list-style: none;
+        display: flex;
+        gap: 80px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .HOME .NAV-BAR ul li a {
+        font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
+        font-size: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .HOME .NAV-BAR ul li a:hover {
+        color: #9ca3af;
+    }
+
+    .HOME .NAV-BAR ul li a.active {
+        text-decoration: underline;
+    }
+
+    .HOME .line {
+        width: 100%;
+        height: 4px;
+    }
+
+
+    .HOME .quote {
+        text-align: center;
+        margin: auto;
+        width: min(831px, 90vw);
+        color: #fff;
+    }
+
+    .HOME .quote-body {
+        font-family: "Perpetua-Regular", Helvetica;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    .HOME .quoter {
+        margin-top: 20px;
+        font-family: "Trajan Pro-Regular", Helvetica;
+        font-size: 22px;
+        text-decoration: underline;
+    }
+
+
+
+    .HOME .BODY {
+        text-align: center;
+        color: #ffffff;
+        font-family: "Perpetua-Regular", Helvetica;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 60px auto;
+        width: min(1115px, 90vw);
+        padding: 0 20px;
+    }
+
+    .HOME .CHARMS {
+        text-align: center;
+        color: #ffffff;
+        font-family: "Perpetua-Regular", Helvetica;
+        font-size: 22px;
+        line-height: 30px;
+        margin: 80px auto;
+        width: min(1115px, 90vw);
+        padding: 0 20px;
+    }
+
+    .HOME .CHARMS h2 {
+        font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .charms-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-top: 40px;
+    }
+
+    .charm {
+        display: grid;
+        grid-template-columns: 90px auto;
+        align-items: center;
+        column-gap: 25px;
+        width: 450px;
+    }
+
+    .charm img {
+        width: 85px;
+        height: 85px;
+        object-fit: contain;
+        justify-self: end;
+    }
+
+    .charm p {
+        font-family: "Perpetua-Regular", Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #ffffff;
+        margin: 0;
+        text-align: left;
+    }
+
+    .charm p strong {
+        display: block;
+        font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
+        font-size: 22px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .map-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 4rem auto;
+        width: 100%;
+    }
+
+    .map-title {
+        font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
+        font-size: 2rem;
+        color: #cfd8dc;
+        margin: 2rem 0 1.5rem 0;
+        text-align: center;
+    }
+
+    .map-image {
+        width: 80%;
+        max-width: 1000px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        margin-bottom: 2rem;
+    }
+
+    .HOME .demo h2 {
+        font-family: "Trajan Pro-Regular", Helvetica, sans-serif;
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+
+    #video {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+        border: none;
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    .HOME .feedback {
+        text-align: center;
+        color: #fff;
+        margin: 100px auto;
+        width: min(701px, 90vw);
+    }
+
+    .feedback .rating {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 15px 0;
+        cursor: pointer;
+    }
+
+    .feedback .rating img {
+        width: 40px;
+        height: 40px;
+        opacity: 0.4;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .feedback .rating img:hover,
+    .feedback .rating img.active {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    .HOME .feedback h2 {
+        font-family: "Trajan Pro-Regular", Helvetica;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .HOME .feedback p {
+        font-family: "Trajan Pro-Regular", Helvetica;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .HOME .feedback-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .HOME .feedback-form input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .HOME .feedback-form button {
+        padding: 10px 20px;
+        background: #1d2e65;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .HOME .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 15px;
+        pointer-events: none;
+    }
+
+    .HOME .overscan-corner-left,
+    .HOME .overscan-corner-right {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .HOME .overscan-corner-right {
+        transform: rotate(180deg);
+    }
+
+    .HOME .quote-divider {
+        margin-top: 25px;
+        width: 500px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.8;
+    }
+
 }
