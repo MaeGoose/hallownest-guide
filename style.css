@@ -241,6 +241,71 @@ nav li a {
     display: none;
 }
 
+.HOME .feedback {
+    text-align: center;
+    color: #fff;
+    margin: 100px auto;
+    width: min(701px, 90vw);
+}
+
+.feedback .rating {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.feedback .rating img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.4;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.feedback .rating img:hover,
+.feedback .rating img.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.HOME .feedback h2 {
+    font-family: "Trajan Pro-Regular", Helvetica;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.HOME .feedback p {
+    font-family: "Trajan Pro-Regular", Helvetica;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.HOME .feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.HOME .feedback-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.HOME .feedback-form button {
+    padding: 10px 20px;
+    background: #1d2e65;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 .mobile {
     display: block;
 }
